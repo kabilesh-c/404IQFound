@@ -2,7 +2,7 @@
 
 **Learn by Testing Yourself!**
 
-404IQFound is a web-based quiz application that lets you challenge your knowledge across multiple categories and modes. It features:</n
+404IQFound is a web-based quiz application that lets you challenge your knowledge across multiple categories and modes. It features:
 - Practice and Timed modes (15 seconds per question)
 - Randomized question pools 
 - Hints to eliminate incorrect options
@@ -10,6 +10,8 @@
 - Dark/light theme toggle
 - Session-based question order persistence
 - Shareable results with custom messages
+
+**🌐 Visit the live site: [404IQFound](https://404iqfound.vercel.app/)**
 
 ## 🛠️ Technologies
 
