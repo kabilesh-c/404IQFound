@@ -90,7 +90,8 @@ const QuizResult: React.FC<QuizResultProps> = ({
   };
 
   const handleShare = () => {
-    const currentUrl = window.location.href;
+    // Use the production URL so share links always point to the live site
+    const currentUrl = 'https://404iqfound.vercel.app';
     let message: string;
     // Low scores (<=40%)
     if (score <= Math.floor(totalQuestions * 0.4)) {

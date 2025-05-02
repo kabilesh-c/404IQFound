@@ -136,8 +136,7 @@ const QuizView: React.FC = () => {
       if (stored) {
         setShuffledQuestions(stored);
       } else if (currentQuiz.questions && currentQuiz.questions.length > 0) {
-        const pool = generateQuestionPool(currentQuiz.questions);
-        const shuffled = shuffleArray(pool);
+        const shuffled = shuffleArray(currentQuiz.questions);
         setShuffledQuestions(shuffled);
         if (currentQuiz.id) storeCurrentQuizQuestions(currentQuiz.id, shuffled);
       }
@@ -220,11 +219,8 @@ const QuizView: React.FC = () => {
   const reshuffleQuestions = () => {
     if (!currentQuiz || !currentQuiz.questions || currentQuiz.questions.length === 0) return;
     
-    // Create a pool of up to 20 questions
-    const questionPool = generateQuestionPool(currentQuiz.questions);
-    
-    // Create new shuffled questions
-    const shuffled = shuffleArray(questionPool);
+    // Shuffle the original questions for a unique set
+    const shuffled = shuffleArray(currentQuiz.questions);
     setShuffledQuestions(shuffled);
     
     // Save the shuffled questions for consistent access
